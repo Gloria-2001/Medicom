@@ -17,9 +17,9 @@ body{
 	left:0;
 	right:0;
 	bottom:0;
-	background-image: url("https://i.imgur.com/HgflTDf.jpg");
-	background-size:auto;
-	-webkit-filter: blur(3px);
+	background-image: url("./images/fondoRegistro.jpg");
+	background-size:cover;
+	-webkit-filter: blur(0.5px);
 	z-index: 0;
 }
 a{
@@ -52,7 +52,7 @@ a{
 	color: #fff;
 	font-family: 'Exo', sans-serif;
 	font-size: 35px;
-	font-weight: 200;
+	font-weight:bolder;
 }
 
 .header div span{
