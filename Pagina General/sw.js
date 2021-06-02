@@ -1,4 +1,5 @@
-const staticCacheName='site-static';
+const staticCacheName='site-static-v1';
+const dynamicCacheName='site-dynamic-v1';
 const assets=[
     './',
     './index.html',
@@ -42,6 +43,7 @@ const assets=[
     'https://fonts.gstatic.com/s/oswald/v36/TK3iWkUHHAIjg752Fz8Ghe4.woff2',
     'https://fonts.gstatic.com/s/oswald/v36/TK3iWkUHHAIjg752GT8G.woff2',
     './Home.css',
+    './fallback.html'
 ];
 
 //install service worker
@@ -58,6 +60,15 @@ self.addEventListener("install",(evt)=>{
 //activate service worker (activate event)
 self.addEventListener("activate",(evt)=>{
     //console.log("Service worker activated");
+    evt.waitUntil(
+        caches.keys().then(keys=>{
+            //console.log(keys);
+            return Promise.all(keys
+                .filter(key => key!==staticCacheName)    
+                .map(key=>caches.delete(key))
+            )
+        })
+    );
 });
 
 //fetch event 
@@ -65,7 +76,12 @@ self.addEventListener("fetch",(evt)=>{
     //console.log("Fetch event",evt);
     evt.respondWith(
         caches.match(evt.request).then(cacheRes=>{
-            return cacheRes || fetch(evt.request);
+            return cacheRes || fetch(evt.request).then(fetchRes=>{
+                return caches.open(dynamicCacheName).then(cache=>{
+                    cache.put(evt.request.url,fetchRes.clone());
+                    return fetchRes;
+                })
+            });
         })
     )
 })
