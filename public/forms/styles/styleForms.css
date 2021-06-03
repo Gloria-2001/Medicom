@@ -43,7 +43,7 @@ input:focus{
     background-color:beige;
 }
 
-h1{
+.titForms{
     font-size:60px;
     color:cornflowerblue;
     font-style: oblique;

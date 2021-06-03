@@ -1,0 +1,219 @@
+<!doctype html>
+<html lang="en">
+  <head>
+  	<title>Men&uacute;</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900" rel="stylesheet">
+		
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link rel="stylesheet" href="css/style.css">
+		<link rel="manifest" href="./manifest.json">
+		<!--IOS SUPPORT-->
+		<link rel="apple-touch-icon" href="./images/icons/icon-96x96.png">
+		<meta name="apple-mobile-web-app-status-bar" content="#20b2aa">
+
+		<meta name="theme-color" content="#20b2aa">
+
+		<style>
+			.titulos{
+				font-size: smaller;
+				font-weight: bold;
+				text-decoration: underline;
+			}
+
+			.subtitulos,table{
+				font-size: 17px;
+			}
+
+			.intro{
+				font-size: 20px;
+			}
+
+			p{
+				display: inline;
+			}
+
+			input{
+				height: 25px;
+				outline: none;
+			}
+
+			table{
+				width: max-content;
+			}
+
+			#fecha, #hora{
+				outline: none;
+				width: 250px;
+				height: 25px;
+			}
+
+			#send,.boton{
+				width: 150px;
+				height: 30px;
+				background-color: #669AE1;
+				border-color: #669AE1;
+				border-radius: 10px;
+				color: white;
+				font-weight: 500;
+			}
+		</style>
+  </head>
+  <body>
+		
+		<div class="wrapper d-flex align-items-stretch">
+			<nav id="sidebar">
+				<div class="custom-menu">
+					<button type="button" id="sidebarCollapse" class="btn btn-primary">
+	          <i class="fa fa-bars"></i>
+	          <span class="sr-only">Toggle Menu</span>
+	        </button>
+        </div>
+				<div class="p-4 pt-5">
+		  		<h1><a href="index.html" class="logo">MediCom</a></h1>
+	        <ul class="list-unstyled components mb-5">
+	          <li class="active">
+	            <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Home</a>
+	            <ul class="collapse list-unstyled" id="homeSubmenu">
+                <li>
+                    <a href="Contact.html">Contacto</a>
+                </li>
+	            </ul>
+	          </li>
+	          <li>
+	              <a href="localizacion.html">Localizaci&oacute;n</a>
+	          </li>
+	          <li>
+              <a href="citas.html">Generar cita</a>
+	          </li>
+	          <li>
+              <a href="recetas.html">Recetas</a>
+	          </li>
+	          <li>
+              <a href="historialclinico.html">Historial cl&iacute;nico</a>
+	          </li>
+              <li>
+              <a href="buscadoctor.html">Busca tu doctor</a>
+	          </li>
+              <li>
+              <a href="agenda.html">Agenda</a>
+	          </li>
+	        </ul>
+
+	        <div class="footer">
+	        	<p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+						  Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart" aria-hidden="true"></i> by <a href="index.html" target="_blank">MediCom</a>
+						  <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
+	        </div>
+
+	      </div>
+    	</nav>
+
+        <!-- Page Content  -->
+      <div id="content" class="p-4 p-md-5 pt-5">
+
+        <h2 class="mb-4">Citas</h2>
+		<p class="intro">¿Necesitas una cita médica?</p><br>
+		<p class="intro">Sólo llena el formulario</p>
+		<br><br>
+		<form action="">
+			<fieldset id="c4">
+				<legend id="parte1">
+					<p class="titulos">Nombre de Usuario:</p><br>
+					<p class="subtitulos">Usuario:</p><br><input type="text" id="usuario">
+					<br><br>
+					<p class="titulos">Nombre del Paciente:</p><br>
+					<p class="subtitulos">Nombre:</p><br><input type="text" id="nombre"><br>
+					<p class="subtitulos">Apellido Paterno:</p><br><input type="text" id="ap"><br>
+					<p class="subtitulos">Apellido Materno:</p><br><input type="text" id="am">
+					<br><br>
+					<p class="titulos">Sexo:</p><br>
+					<input type="radio" name="sexo" id="h" value="Hombre"><p class="subtitulos"> Hombre</p><br>
+					<input type="radio" name="sexo" id="m" value="Mujer"><p class="subtitulos"> Mujer</p><br>
+					<input type="radio" name="sexo" id="o" value="Otro"><p class="subtitulos"> Prefiero no decirlo</p>
+					<br><br>
+					<p class="titulos">Clínica de su preferencia:</p><br>
+					<p class="subtitulos">Nombre de la Clínica:</p><br><input type="text" name="" id="clinica">
+					<br><br>
+					<p class="titulos">Doctor con el que le gustaría acudir:</p><br>
+					<p class="subtitulos">Nombre del Médico:</p><br><input type="text" name="" id="doctor"><br>
+					<p class="subtitulos"><i>En caso de no tener el nombre del doctor a la mano, elija en qué área requiere la cita.</i></p>
+					<table>
+						<tr>
+							<td><input type="checkbox" name="especialidades" value="Alergología"> Alergología</td>
+							<td><input type="checkbox" name="especialidades" value="Anestesiología y reanimación"> Anestesiología y reanimación</td>
+							<td><input type="checkbox" name="especialidades" value="Cardiología"> Cardiología</td>
+							<td><input type="checkbox" name="especialidades" value="Endocrinología"> Endocrinología</td>
+							<td><input type="checkbox" name="especialidades" value=" Gastroenterología"> Gastroenterología</td>
+						</tr>
+						<tr>
+							<td><input type="checkbox" name="especialidades" value="Geriatría"><p class="subtitulos"> Geriatría</td>
+							<td><input type="checkbox" name="especialidades" value="Hematología y hemoterapia"> Hematología y hemoterapia</td>
+							<td><input type="checkbox" name="especialidades" value="Infectología"> Infectología</td>
+							<td><input type="checkbox" name="especialidades" value="Medicina aeroespacial"> Medicina aeroespacial</td>
+							<td><input type="checkbox" name="especialidades" value="Medicina del deporte"> Medicina del deporte</td>
+						</tr>
+						<tr>
+							<td><input type="checkbox" name="especialidades" value="Nefrología"> Nefrología</td>
+							<td><input type="checkbox" name="especialidades" value="Neumología"> Neumología</td>
+							<td><input type="checkbox" name="especialidades" value="Neurología"> Neurología</td>
+							<td><input type="checkbox" name="especialidades" value="Nutriología"> Nutriología</td>
+							<td><input type="checkbox" name="especialidades" value="Oftalmología"> Oftalmología</td>
+						</tr>
+						<tr>
+							<td><input type="checkbox" name="especialidades" value="Oncología médica"> Oncología médica</td>
+							<td><input type="checkbox" name="especialidades" value="Oncología radioterápica"> Oncología radioterápica</td>
+							<td><input type="checkbox" name="especialidades" value="Pediatría"> Pediatría</td>
+							<td><input type="checkbox" name="especialidades" value="Psiquiatría"> Psiquiatría</td>
+							<td><input type="checkbox" name="especialidades" value="Toxicología"> Toxicología</td>
+						</tr>
+						<tr>
+							<td><input type="checkbox" name="especialidades" value="Cirugía cardiovascular"> Cirugía cardiovascular</td>
+							<td><input type="checkbox" name="especialidades" value="Cirugía general y del aparato digestivo"> Cirugía general y del aparato digestivo</td>
+							<td><input type="checkbox" name="especialidades" value="Cirugía ortopédica y traumatología"> Cirugía ortopédica y traumatología</td>
+							<td><input type="checkbox" name="especialidades" value="Cirugía pediátrica"> Cirugía pediátrica</td>
+							<td><input type="checkbox" name="especialidades" value="Cirugía torácica"> Cirugía torácica</td>
+						</tr>
+						<tr>
+							<td><input type="checkbox" name="especialidades" value="Neurocirugía"> Neurocirugía</td>
+							<td><input type="checkbox" name="especialidades" value="Angiología y cirugía vascular"> Angiología y cirugía vascular</td>
+							<td><input type="checkbox" name="especialidades" value="Dermatología"> Dermatología</td>
+							<td><input type="checkbox" name="especialidades" value="Odontología" > Odontología</td>
+							<td><input type="checkbox" name="especialidades" value="Ginecología y obstetricia o tocología"> Ginecología y obstetricia o tocología</td>
+						</tr>
+						<tr>
+							<td><input type="checkbox" name="especialidades" value="Otorrinolaringología"> Otorrinolaringología</td>
+							<td><input type="checkbox" name="especialidades" value="Urología"> Urología</td>
+							<td><input type="checkbox" name="especialidades" value="Traumatología"> Traumatología</td>
+							<td><input type="checkbox" name="especialidades" value="Inmunología"> Inmunología</td>
+							<td><input type="checkbox" name="especialidades" value="Neurofisiología clínica"> Neurofisiología clínica</td>
+						</tr>
+					</table>
+					<br><br>
+					<p class="titulos">Indique la fecha en que le gustaría la cita:</p><br>
+					<input type="date" name="" id="fecha">
+					<br><br>
+					<p class="titulos">Coloque la hora que mejor le acomode:</p><br>
+					<input type="time" name="" id="hora">
+					<br><br>
+				</legend>
+			</fieldset>
+			<br>
+			<div id="botones">
+				<input type="button" value="Registrar Cita" id="send" class="boton">
+				<button type="reset" class="boton">Borrar</button>   
+			</div>
+		</form>
+      </div>
+		</div>
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/popper.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/main.js"></script>
+
+    <script src="./app.js"></script>
+  </body>
+</html>

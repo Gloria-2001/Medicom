@@ -1,5 +1,5 @@
-const staticCacheName='site-static-v3';
-const dynamicCacheName='site-dynamic-v1';
+const staticCacheName='site-static-v4';
+const dynamicCacheName='site-dynamic-v5';
 const assets=[
     './',
     './index.html',
@@ -43,7 +43,7 @@ const assets=[
     'https://fonts.gstatic.com/s/oswald/v36/TK3iWkUHHAIjg752Fz8Ghe4.woff2',
     'https://fonts.gstatic.com/s/oswald/v36/TK3iWkUHHAIjg752GT8G.woff2',
     './Home.css',
-    './fallback.html'
+    './fallback.html',
 ];
 
 //cache size limit function
@@ -90,7 +90,7 @@ self.addEventListener("fetch",(evt)=>{
             return cacheRes || fetch(evt.request).then(fetchRes=>{
                 return caches.open(dynamicCacheName).then(cache=>{
                     cache.put(evt.request.url,fetchRes.clone());
-                    limitCacheSize(dynamicCacheName,50)
+                    limitCacheSize(dynamicCacheName,100)
                     return fetchRes;
                 })
             });
