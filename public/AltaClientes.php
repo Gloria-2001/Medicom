@@ -1,5 +1,5 @@
 <?
-    include ("conexion.php");
+   include ("conexion.php");
 	
 	if (strcmp($alergias, "No")==0) {
 		$Alergia="Ninguna";

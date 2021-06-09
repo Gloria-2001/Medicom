@@ -9,7 +9,7 @@
     $contrasena = "nq(zF5rg<QKnCmSN";
   
     // Nombre de la base de datos
-    $baseDeDatos ="id16940318_medicomdb";
+    $baseDeDatos ="id16940318_medicomdb	";
   
     // Nombre de la tabla a trabajar
      
