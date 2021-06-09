@@ -3,13 +3,13 @@
      $host = "localhost";
   
     // Nombre de usuario del servidor MySQL
-    $usuario = "root";
+    $usuario = "id16940318_medicomdb123";
   
      // Contraseña del usuario
-    $contrasena = "";
+    $contrasena = "nq(zF5rg<QKnCmSN";
   
     // Nombre de la base de datos
-    $baseDeDatos ="medicom";
+    $baseDeDatos ="id16940318_medicomdb";
   
     // Nombre de la tabla a trabajar
      
