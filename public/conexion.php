@@ -1,44 +1,39 @@
-<?
-     // Dirección o IP del servidor MySQL
-     $host = "localhost";
-  
-    // Nombre de usuario del servidor MySQL
-    $usuario = "id16940318_medicomdb123";
-  
-     // Contraseña del usuario
-    $contrasena = "nq(zF5rg<QKnCmSN";
-  
-    // Nombre de la base de datos
-    $baseDeDatos ="id16940318_medicomdb	";
-  
-    // Nombre de la tabla a trabajar
-     
-  
-     function Conectarse()
-    {
-      global $host, $usuario, $contrasena, $baseDeDatos;
-  
-      if (!($link = mysqli_connect($host,$usuario,$contrasena,$baseDeDatos);))) 
-      { 
-         echo "Error conectando a la base de datos.<br>"; 
-        exit(); 
-             }
-      else
-       {
-        echo "Listo, estamos conectados.<br>";
-       }
-      if (!mysqli_select_db($link, $baseDeDatos)) 
-       { 
-         echo "Error seleccionando la base de datos.<br>"; 
-         exit(); 
-       }
-      else
-       {
-        echo "Obtuvimos la base de datos $baseDeDatos sin problema.<br>";
-      }
-    return $link; 
-     } 
-  
-     $link = Conectarse();
+<?php
+$hostname="localhost";
+$database="id16940318_medicom";
+$username="id16940318_medicom123";
+$password="z1$RLFCg@aqf}U<h";
+$json=array();
+	if(isset($_GET["USER"]) && isset($_GET["contrasena"])){
+		$USER=$_GET['USER'];
+		$contrasena=$_GET['contrasena'];
 
+		$conexion=mysqli_connect($hostname,$username,$password,$database);
+
+		$consulta="SELECT id_Paciente, contrasena FROM login WHERE id_Paciente = '{$USER}' AND contrasena = '{$contrasena}'";
+		$resultado=mysqli_query($conexion,$consulta);
+
+		if($consulta){
+
+			if($reg=mysqli_fetch_array($resultado)){
+				$json['datos'][]=$reg;
+			}
+			mysqli_close($conexion);
+			echo json_encode($json);
+		}
+
+		else{
+			$results["USER"]='';
+			$results["contrasena"]='';
+			$json['datos'][]=$results;
+			echo json_encode($json);
+		}
+	}
+
+	else{
+      $results["USER"]='';
+      $results["contrasena"]='';
+			$json['datos'][]=$results;
+			echo json_encode($json);
+		}
 ?>
