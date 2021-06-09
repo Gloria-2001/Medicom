@@ -1,9 +1,6 @@
 <?
      // Dirección o IP del servidor MySQL
      $host = "localhost";
- 
-     // Puerto del servidor MySQL
-     $puerto = "3306";
   
     // Nombre de usuario del servidor MySQL
     $usuario = "root";
@@ -19,9 +16,9 @@
   
      function Conectarse()
     {
-      global $host, $puerto, $usuario, $contrasena, $baseDeDatos;
+      global $host, $usuario, $contrasena, $baseDeDatos;
   
-      if (!($link = mysqli_connect($host.":".$puerto, $usuario, $contrasena))) 
+      if (!($link = mysqli_connect($host,$usuario,$contrasena,$baseDeDatos);))) 
       { 
          echo "Error conectando a la base de datos.<br>"; 
         exit(); 
@@ -43,5 +40,5 @@
      } 
   
      $link = Conectarse();
-     
+
 ?>
