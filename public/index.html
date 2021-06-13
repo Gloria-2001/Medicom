@@ -56,10 +56,20 @@
 </li>
 <li class="u-nav-item">
     <label class="switchBtn">
-    <input type="checkbox" id="myCheck" onclick="myFunction()">
+    <input type="checkbox" id="myCheck">
     <div class="slide round">Médico</div>
     </label>
-  </li></ul>
+</li>
+<div id="my-modal" class="modal">
+  <div class="modal-content">
+    <div class="modal-header">
+      <span id="close-span" class="close">&times;</span>
+      <h2 id="text-head"></h2>
+    </div>
+    <p id="text-modal"></p>
+  </div>
+</div>
+</ul>
           </div>
           <div class="u-custom-menu u-nav-container-collapse">
             <div class="u-black u-container-style u-inner-container-layout u-opacity u-opacity-95 u-sidenav">
@@ -68,7 +78,10 @@
                 <ul class="u-align-center u-nav u-popupmenu-items u-unstyled u-nav-2"><li class="u-nav-item"><a class="u-button-style u-nav-link" href="./index.html" style="padding: 10px 20px;">Home</a>
 </li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="./About.html" style="padding: 10px 20px;">Menú</a>
 </li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="./Contact.html" style="padding: 10px 20px;">Contacto</a>
-</li></ul>
+</li><li class="u-nav-item">
+  <label class="switchBtn">
+  <input type="checkbox" id="myCheck" onclick="myFunction()">
+  <div class="slide round">Médico</div></label></li></ul>
               </div>
             </div>
             <div class="u-black u-menu-overlay u-opacity u-opacity-70"></div>

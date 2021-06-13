@@ -4,7 +4,8 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(to right bottom, blue, green);
+  background-image: url(./images/fondoHomeMedico.jpg);
+  background-size: cover;
  }
 
 nav ul {
@@ -13,8 +14,8 @@ nav ul {
 }
 
 nav ul li {
-  font-size: 40px;
-  font-family: sans-serif;
+  font-size: 30px;
+  font-family: Arial, Helvetica, sans-serif;
   background-color: white;
   border: 2px solid black;
   letter-spacing: 0.1em;
@@ -47,3 +48,4 @@ nav ul li::before {
 nav ul li:hover::before {
   transform: scale(20);
 }
+

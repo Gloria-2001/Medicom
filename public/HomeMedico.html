@@ -13,14 +13,29 @@
     <script class="u-script" type="text/javascript" src="jquery.js" defer=""></script>
     <script class="u-script" type="text/javascript" src="nicepage.js" defer=""></script>
     <script class="u-script" type="text/javascript" src="modo.js" defer=""></script>
+    <link rel="manifest" href="./manifest.json">
+    <!--IOS SUPPORT-->
+    <link rel="apple-touch-icon" href="./images/icons/icon-96x96.png">
+    <meta name="apple-mobile-web-app-status-bar" content="#20b2aa">
+
+    <meta name="theme-color" content="#20b2aa">
     </head>
   <body>
     <nav>
   <ul>
     <label class="switchBtn">
-    <input type="checkbox" id="myCheck" onclick="myFunction()" checked="true">
+    <input type="checkbox" id="myCheck" checked="true">
     <div class="slide round">Médico</div>
     </label>
+    <div id="my-modal" class="modal">
+      <div class="modal-content">
+        <div class="modal-header">
+          <span id="close-span" class="close">&times;</span>
+          <h2 id="text-head"></h2>
+        </div>
+        <p id="text-modal"></p>
+      </div>
+    </div>
     <li><a href="sesiondoctor.html"><span>Inicia sesión</span></a></li>
     <li><span>Consulta pacientes</span></li>
     <li><span>Consulta citas</span></li>
@@ -30,6 +45,6 @@
   </ul>
 </nav>
 
-
+  <script src="./app.js"></script>
   </body>
   </html>
