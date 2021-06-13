@@ -2733,7 +2733,7 @@ input:checked + .slide:before {
     margin: 15% auto;
     /* 15% from the top and centered */
     padding: 2em;
-    width: 40%;
+    width:fit-content;
     /* Could be more or less, depending on screen size */
     animation-name: animatetop;
     animation-duration: 0.4s

@@ -1,5 +1,5 @@
-const staticCacheName='site-static-v5';
-const dynamicCacheName='site-dynamic-v6';
+const staticCacheName='site-static-v4';
+const dynamicCacheName='site-dynamic-v8';
 const assets=[
     './',
     './index.html',
@@ -90,7 +90,7 @@ self.addEventListener("fetch",(evt)=>{
             return cacheRes || fetch(evt.request).then(fetchRes=>{
                 return caches.open(dynamicCacheName).then(cache=>{
                     cache.put(evt.request.url,fetchRes.clone());
-                    limitCacheSize(dynamicCacheName,100)
+                    limitCacheSize(dynamicCacheName,400)
                     return fetchRes;
                 })
             });
