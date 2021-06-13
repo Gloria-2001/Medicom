@@ -2767,3 +2767,7 @@ input:checked + .slide:before {
       opacity: 1
   }
 }
+
+#switch{
+  margin-left: 45% !important;
+}
