@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
   <head>
-  	<title>Consulta de Citas</title>
+  	<title>Consulta Historial Clínico</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -46,19 +46,22 @@
 
         <!-- Page Content  -->
       <div id="content" class="p-4 p-md-5 pt-5">
-        <h2 class="mb-4">Consulta tus citas</h2>
-        <p>Aquí podrás ver las citas que se te asignaron.</p>
-        <p>Ingresa tu ID de médico.</p>
-        <input type="number" name="medico" id="buscaMedico">
+        <h2 class="mb-4">Consulta el Historial Clínico</h2>
+        <p>Aquí podrás realizar el seguimiento de los datos más importantes de tus pacientes durante el uso de MediCom, nos aseguramos que solo esta información la tengan personal estrictamente autorizado.</p>
+        <p>Ingresa el ID de tu paciente.</p>
+        <input type="search" name="historial" id="buscaHistorial">
         <input type="button" value="Buscar" id="botonBuscar">
+        <input type="button" value="Limpiar" id="botonLimpiar">
+        <input type="button" value="Modificar" id="botonModificar">
         <br><br>
         <table border="1">
             <thead>
                 <th>ID Paciente</th>
                 <th>Nombre Paciente</th>
-                <th>Fecha</th>
-                <th>Hora</th>
-                <th>Clínica</th>
+                <th>Dirección</th>
+                <th>Alergias</th>
+                <th>Doctores que le han atendido</th>
+                <th>Observaciones de seguimiento</th>
             </thead>
         </table>
       </div>
