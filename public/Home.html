@@ -53,12 +53,6 @@
             <ul class="u-nav u-unstyled u-nav-1"><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-4-base" href="Home.html" style="padding: 10px 20px;">Home</a>
 </li><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-4-base" href="About.html" style="padding: 10px 20px;">Menú</a>
 </li><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-4-base" href="Contact.html" style="padding: 10px 20px;">Contacto</a>
-  <li class="u-nav-item">
-    <label class="switchBtn">
-    <input type="checkbox" id="myCheck" onclick="myFunction()">
-    <div class="slide round">Médico</div>
-    </label>
-  </li>
 </li></ul>
           </div>
           <div class="u-custom-menu u-nav-container-collapse">
@@ -75,6 +69,25 @@
           </div>
         </nav>
       </div></header>
+      <nav>
+        <ul>
+          <li class="u-nav-item" id="switch">
+            <label class="switchBtn">
+            <input type="checkbox" id="myCheck">
+            <div class="slide round">Médico</div>
+            </label>
+          </li>
+          <div id="my-modal" class="modal">
+            <div class="modal-content">
+              <div class="modal-header">
+                <span id="close-span" class="close">&times;</span>
+                <h2 id="text-head"></h2>
+              </div>
+              <p id="text-modal"></p>
+            </div>
+          </div>
+        </ul>
+      </nav>
     <section class="u-clearfix u-image u-section-1"  
       <div class="u-clearfix u-sheet u-sheet-1">
         <div class="u-container-style u-expanded-width-xs u-group u-group-1">
