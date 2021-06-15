@@ -1,4 +1,4 @@
-const staticCacheName='site-static-v0';
+const staticCacheName='site-static-v3';
 const dynamicCacheName='site-dynamic-v0';
 const assets=[
     './',
@@ -44,6 +44,7 @@ const assets=[
     'https://fonts.gstatic.com/s/oswald/v36/TK3iWkUHHAIjg752GT8G.woff2',
     './Home.css',
     './fallback.html',
+    './images/imagenFallback.jpg',
 ];
 
 //cache size limit function
