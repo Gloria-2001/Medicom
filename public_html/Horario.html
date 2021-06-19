@@ -1,0 +1,204 @@
+<!doctype html>
+<html lang="en">
+  <head>
+  	<title>Horario</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900" rel="stylesheet">
+		
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link rel="stylesheet" href="sidebar-04/css/style.css">
+        <link rel="manifest" href="./manifest.json">
+    <!--IOS SUPPORT-->
+    <link rel="apple-touch-icon" href="./images/icons/icon-96x96.png">
+    <meta name="apple-mobile-web-app-status-bar" content="#20b2aa">
+
+    <meta name="theme-color" content="#20b2aa">
+  </head>
+  <body>
+		
+		<div class="wrapper d-flex align-items-stretch">
+			<nav id="sidebar">
+				<div class="custom-menu">
+					<button type="button" id="sidebarCollapse" class="btn btn-primary">
+	          <i class="fa fa-bars"></i>
+	          <span class="sr-only">Toggle Menu</span>
+	        </button>
+        </div>
+	  		<h1><a href="index.html" class="logo">MediCom</a></h1>
+        <ul class="list-unstyled components mb-5">
+          <li class="active">
+            <a href="./consultaPacientes.html"><span class="fa fa-home mr-3"></span>Consulta Pacientes</a>
+          </li>
+          <li>
+              <a href="./consultaCitas.html"><span class="fa fa-user mr-3"></span>Consulta Citas</a>
+          </li>
+          <li>
+            <a href="./consultaHistorial.html"><span class="fa fa-sticky-note mr-3"></span>Consulta Historial Clínico</a>
+          </li>
+          <li>
+            <a href="./Horario.html"><span class="fa fa-sticky-note mr-3"></span>Horario</a>
+          </li>
+        </ul>
+
+    	</nav>
+
+        <!-- Page Content  -->
+      <div id="content" class="p-4 p-md-5 pt-5">
+        <h2 class="mb-4">Horario</h2>
+        <p>Aquí podrás indicar tus días inhábiles, y tu estatus de servicio actual.</p>
+        <table id="calendar" align="center">
+  <caption></caption>
+  <thead>
+    <tr>
+      <th>Lun</th><th>Mar</th><th>Mie</th><th>Jue</th><th>Vie</th><th>Sab</th><th>Dom</th>
+    </tr>
+  </thead>
+  <tbody>
+  </tbody>
+  </table>
+  <form action="./AltaHorario.php" method="POST">
+  <p class="opc">Ingresa fecha de día inhábil:</p>
+                <select name="mes" id="mes">
+                    <option value="0">Mes</option>
+                    <option value="1">01</option>
+                    <option value="2">02</option>
+                    <option value="3">03</option>
+                    <option value="4">04</option>
+                    <option value="5">05</option>
+                    <option value="6">06</option>
+                    <option value="7">07</option>
+                    <option value="8">08</option>
+                    <option value="9">09</option>
+                    <option value="10">10</option>
+                    <option value="11">11</option>
+                    <option value="12">12</option>
+                </select>
+                <select name="dia" id="dia">
+                    <option value="0">Día</option>
+                    <option value="1">01</option>
+                    <option value="2">02</option>
+                    <option value="3">03</option>
+                    <option value="4">04</option>
+                    <option value="5">05</option>
+                    <option value="6">06</option>
+                    <option value="7">07</option>
+                    <option value="8">08</option>
+                    <option value="9">09</option>
+                    <option value="10">10</option>
+                    <option value="11">11</option>
+                    <option value="12">12</option>
+                    <option value="13">13</option>
+                    <option value="14">14</option>
+                    <option value="15">15</option>
+                    <option value="16">16</option>
+                    <option value="17">17</option>
+                    <option value="18">18</option>
+                    <option value="19">19</option>
+                    <option value="20">20</option>
+                    <option value="21">21</option>
+                    <option value="22">22</option>
+                    <option value="23">23</option>
+                    <option value="24">24</option>
+                    <option value="25">25</option>
+                    <option value="26">26</option>
+                    <option value="27">27</option>
+                    <option value="28">28</option>
+                    <option value="29">29</option>
+                    <option value="30">30</option>
+                    <option value="31">31</option>
+                </select>
+                <input type="text" name="anio" placeholder="Año a 4 digitos">
+                <a>Ingresa tu ID de médico.</a>
+                <input type="number" name="User" id="buscaMedico">
+                <input type="submit" name="Enviar" value="Registrar_día" id="botonEnviar">
+                <br><br>
+                <p>Indica tu situación de trabajo, apaga el switch si no estas disponible y prendelo de lo contario.</p>
+                <label class="switchBtn">
+                <input type="checkbox" id="myCheck" name="estatus" value="Disponible">
+                <div class="slide round">Disponible</div>
+                </label><br>
+                <input type="submit" name="Modificar" value="Actualizar_estatus" id="botonModificar">
+      </div>
+		</div>
+
+    <script src="./sidebar-04/js/jquery.min.js"></script>
+    <script src="./sidebar-04/js/popper.js"></script>
+    <script src="./sidebar-04/js/bootstrap.min.js"></script>
+    <script src="./sidebar-04/js/main.js"></script>
+    <script src="./app.js"></script>
+  </form>
+  </body>
+</html>
+<script>
+var actual=new Date();
+function mostrarCalendario(year,month)
+{
+  var now=new Date(year,month-1,1);
+  var last=new Date(year,month,0);
+  var primerDiaSemana=(now.getDay()==0)?7:now.getDay();
+  var ultimoDiaMes=last.getDate();
+  var dia=0;
+  var resultado="<tr bgcolor='silver'>";
+  var diaActual=0;
+  console.log(ultimoDiaMes);
+ 
+  var last_cell=primerDiaSemana+ultimoDiaMes;
+ 
+  // hacemos un bucle hasta 42, que es el máximo de valores que puede
+  // haber... 6 columnas de 7 dias
+  for(var i=1;i<=42;i++)
+  {
+    if(i==primerDiaSemana)
+    {
+      // determinamos en que dia empieza
+      dia=1;
+    }
+    if(i<primerDiaSemana || i>=last_cell)
+    {
+      // celda vacia
+      resultado+="<td>&nbsp;</td>";
+    }else{
+      // mostramos el dia
+      if(dia==actual.getDate() && month==actual.getMonth()+1 && year==actual.getFullYear())
+        resultado+="<td class='hoy'>"+dia+"</td>";
+      else
+        resultado+="<td>"+dia+"</td>";
+      dia++;
+    }
+    if(i%7==0)
+    {
+      if(dia>ultimoDiaMes)
+        break;
+      resultado+="</tr><tr>\n";
+    }
+  }
+  resultado+="</tr>";
+ 
+  var meses=Array("Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre");
+ 
+  // Calculamos el siguiente mes y año
+  nextMonth=month+1;
+  nextYear=year;
+  if(month+1>12)
+  {
+    nextMonth=1;
+    nextYear=year+1;
+  }
+ 
+  // Calculamos el anterior mes y año
+  prevMonth=month-1;
+  prevYear=year;
+  if(month-1<1)
+  {
+    prevMonth=12;
+    prevYear=year-1;
+  }
+ 
+  document.getElementById("calendar").getElementsByTagName("caption")[0].innerHTML="<div>"+meses[month-1]+" / "+year+"</div><div><a onclick='mostrarCalendario("+prevYear+","+prevMonth+")'>&lt;</a> <a onclick='mostrarCalendario("+nextYear+","+nextMonth+")'>&gt;</a></div>";
+  document.getElementById("calendar").getElementsByTagName("tbody")[0].innerHTML=resultado;
+}
+ 
+mostrarCalendario(actual.getFullYear(),actual.getMonth()+1);
+</script>
