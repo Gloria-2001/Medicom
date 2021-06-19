@@ -44,6 +44,9 @@
           <li>
             <a href="./Horario.html"><span class="fa fa-sticky-note mr-3"></span>Horario</a>
           </li>
+          <li>
+            <a href="./generarRecetas.html"><span class="fa fa-sticky-note mr-3"></span>Generar recetas</a>
+          </li>
         </ul>
 
     	</nav>
