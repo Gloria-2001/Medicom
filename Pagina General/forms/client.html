@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro Cliente</title>
+    <link rel="stylesheet" href="./styles/styleForms.css">
+    <link rel="manifest" href="../manifest.json">
+    <!--IOS SUPPORT-->
+    <link rel="apple-touch-icon" href="../images/icons/icon-96x96.png">
+    <meta name="apple-mobile-web-app-status-bar" content="#20b2aa">
+
+    <meta name="theme-color" content="#20b2aa">
+</head>
+<header>
+    <img src="../images/logoMedicom.PNG" alt="">
+</header>
+<body>
+    <h1>Registro de Pacientes</h1>
+    <p>¿Quieres formar parte de nuestra comunidad de clientes satisfechos?</p><br><br>
+    <p>Entonces...¿qué esperas? Sólo llena el formulario</p><br><br>
+    <form action="">
+        <fieldset id="c1">
+            <legend class="titulo">Información General</legend>
+            <legend id="parte1">
+                <p class="opc">Nombre:</p>&nbsp;<input type="text" id="nombre" nombre="Nombre"><br>
+                <p class="opc">Apellido Paterno:</p>&nbsp;<input type="text" id="ap" nombre="Apellido_P"><br>
+                <p class="opc">Apellido Materno:</p>&nbsp;<input type="text" id="am" nombre="Apellido_M">
+                <br><br>
+                <p class="opc">Calle:</p>&nbsp;<input type="text" id="calle" name="Calle"> <br>
+                <p class="opc">No.</p>&nbsp;<input type="number" id="num" name="Num"> <br>
+                <p class="opc">Colonia</p>&nbsp;<input type="text" id="col" name="Col"> <br>
+                <p class="opc">CP</p>&nbsp;<input type="number" id="cp" name="Cp"> <br>
+                <p class="opc">Delegación o Municipio</p><input type="text" id="delMun" name="Del"> 
+                <br><br>
+                <p class="opc">Sexo:</p>
+                <input type="radio" name="sexo" id="h" value="Hombre"><p></p>Hombre 
+                <input type="radio" name="sexo" id="m" value="Mujer"><p>Mujer</p> 
+                <input type="radio" name="sexo" id="o" value="Otro"><p>Prefiero no decirlo</p>
+                <br><br>
+                <p class="opc">CURP:</p> 
+                <input type="text" name="" id="curp" name="CURP">
+                <br><br>
+                <p class="opc">Número de Seguridad Social:</p> 
+                <input type="text" name="" id="NSS" name="NSS">
+                <br><br>
+                <p class="opc">Estado Civil:</p>
+                <input type="radio" name="edoCivil" id="s" value="Soltero"><p>Soltero</p> 
+                <input type="radio" name="edoCivil" id="c" value="Casado"><p>Casado</p> 
+                <input type="radio" name="edoCivil" id="v" value="Viudo"><p>Viudo</p>
+                <input type="radio" name="edoCivil" id="d" value="Divorciado"><p>Divorciado</p>
+                <br><br>
+                <p class="opc">Fecha de Nacimiento:</p>
+                <select name="mes" id="mes">
+                    <option value="0">Mes</option>
+                    <option value="1">01</option>
+                    <option value="2">02</option>
+                    <option value="3">03</option>
+                    <option value="4">04</option>
+                    <option value="5">05</option>
+                    <option value="6">06</option>
+                    <option value="7">07</option>
+                    <option value="8">08</option>
+                    <option value="9">09</option>
+                    <option value="10">10</option>
+                    <option value="11">11</option>
+                    <option value="12">12</option>
+                </select>
+                <select name="dia" id="dia">
+                    <option value="0">Día</option>
+                    <option value="1">01</option>
+                    <option value="2">02</option>
+                    <option value="3">03</option>
+                    <option value="4">04</option>
+                    <option value="5">05</option>
+                    <option value="6">06</option>
+                    <option value="7">07</option>
+                    <option value="8">08</option>
+                    <option value="9">09</option>
+                    <option value="10">10</option>
+                    <option value="11">11</option>
+                    <option value="12">12</option>
+                    <option value="13">13</option>
+                    <option value="14">14</option>
+                    <option value="15">15</option>
+                    <option value="16">16</option>
+                    <option value="17">17</option>
+                    <option value="18">18</option>
+                    <option value="19">19</option>
+                    <option value="20">20</option>
+                    <option value="21">21</option>
+                    <option value="22">22</option>
+                    <option value="23">23</option>
+                    <option value="24">24</option>
+                    <option value="25">25</option>
+                    <option value="26">26</option>
+                    <option value="27">27</option>
+                    <option value="28">28</option>
+                    <option value="29">29</option>
+                    <option value="30">30</option>
+                    <option value="31">31</option>
+                </select>
+                <input type="number" placeholder="Año" name="anio">
+                <br><br>
+                <p class="opc">Talla:</p>
+                <input type="number" name="Talla" id="talla">
+                <br><br>
+                <p class="opc">Peso:</p>
+                <input type="number" name="Peso" id="peso">
+                <br><br>
+                <p class="opc">Alergias:</p>
+                <input type="radio" name="alergias" id="s" value="Si"><p>Si</p>
+                <input type="radio" name="alergias" id="n" value="No"><p>No</p>
+                &nbsp;&nbsp;&nbsp;<p class="opc"><u>En el caso de presentar alergias, indique cuáles son:</u></p><br>
+               <textarea name="alergia" id="" cols="40" rows="5"></textarea>
+                <br><br>
+            </legend>
+        </fieldset>
+        <fieldset id="c2">
+            <legend class="titulo">Contacto</legend>
+            <legend>
+                <p class="opc">Correo:</p>
+                <input type="email" name="email" id="">
+                <br><br>
+                <p class="opc">Teléfono:</p>
+                <input type="tel" name="Tel" id="">
+            </legend>
+        </fieldset>
+        <fieldset id="c3">
+            <legend class="titulo">Datos para la página</legend>
+            <legend>
+                <p>Elija un usuario y una contraseña</p><br><br>
+                <p class="opc">Usuario:</p>
+                <input type="text" name="USER" id="">
+                <br><br>
+                <p class="opc">Contraseña:</p>
+                <input type="password" name="contrasena" id="">
+                <br><br>
+                <p class="opc">Confirme contraseña:</p>
+                <input type="password" name="contrasena1" id="">
+            </legend>
+        </fieldset> 
+        <br>
+        <div id="botones">
+            <input type="submit" value="Registrarse" id="send" class="boton">
+            <button type="reset" class="boton">Borrar</button>   
+        </div>
+    </form>
+    <script src="../app.js"></script>
+</body>
+</html>
