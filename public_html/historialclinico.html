@@ -15,6 +15,26 @@
 		<meta name="apple-mobile-web-app-status-bar" content="#20b2aa">
 
 		<meta name="theme-color" content="#20b2aa">
+		<style>
+			p{
+				text-align: justify;
+			}
+			th{
+				text-align: center;
+			}
+			#botonBuscar{
+  background-color: #5564eb;
+  color: white;
+  border-color: #5564eb;
+  border-radius: 10px;
+}
+#botonLimpiar{
+  background-color: #5564eb;
+  color: white;
+  border-color: #5564eb;
+  border-radius: 10px;
+}
+		</style>
   </head>
   <body>
 		
@@ -44,13 +64,13 @@
               <a href="citas.html">Generar cita</a>
 	          </li>
 	          <li>
-              <a href="recetas.php">Recetas</a>
+              <a href="recetas.html">Recetas</a>
 	          </li>
 	          <li>
               <a href="historialclinico.html">Historial cl&iacute;nico</a>
 	          </li>
               <li>
-              <a href="buscadoctor.php">Busca tu doctor</a>
+              <a href="buscadoctor.html">Busca tu doctor</a>
 	          </li>
               <li>
               <a href="agenda.html">Agenda</a>
@@ -67,11 +87,25 @@
     	</nav>
 
         <!-- Page Content  -->
-      <div id="content" class="p-4 p-md-5 pt-5">
+        <div id="content" class="p-4 p-md-5 pt-5">
 
-        <h2 class="mb-4">Historial cl&iacute;nico</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      <h2 class="mb-4">Historial Clínico</h2>
+        <p>Aquí podrás realizar el seguimiento de tus datos más importantes durante el uso de MediCom, nos aseguramos que solo esta información la tengan personal estrictamente autorizado.</p>
+        <p>Ingresa tu ID de paciente.</p>
+        <input type="search" name="historial" id="buscaHistorial">
+        <input type="button" value="Buscar" id="botonBuscar">
+        <input type="button" value="Limpiar" id="botonLimpiar">
+        <br><br>
+        <table border="1">
+            <thead>
+                <th>ID Paciente</th>
+                <th>Nombre Paciente</th>
+                <th>Dirección</th>
+                <th>Alergias</th>
+                <th>Doctores que le han atendido</th>
+                <th>Observaciones de seguimiento</th>
+            </thead>
+        </table>
       </div>
 		</div>
 

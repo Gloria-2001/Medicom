@@ -21,16 +21,11 @@
  
          if($resultInsert1)
          {
-            echo'<script>
-            alert("Se rgistro con exito");
-            </script>';
+            echo "<strong>Se ingresaron los registros con exito login</strong>. <br>";
          }
          else
          {
-            echo'<script>
-            alert("No se registro ");
-            window.location="../forms/client.html";
-            </script>';
+            echo "No se ingresaron los registros.log <br>";
          }
  
       }
@@ -44,17 +39,11 @@
  
          if($resultInsert)
          {
-            echo'<script>
-            alert("Se rgistro con exito datos del usuario y contraseña");
-            </script>';
-            
+            echo "<strong>Se ingresaron los registros con exito paciente</strong>. <br>";
          }
          else
          {
-            echo'<script>
-            alert("No se registro ");
-            window.location="../forms/client.html";
-            </script>';
+            echo "No se ingresaron los registros.pac <br>";
          }
  
       }
@@ -69,16 +58,11 @@
  
          if($resultInsert)
          {
-            echo'<script>
-            alert("Se rgistro con exito al paciente");
-            window.location="sesion.html";
-            </script>';
+            echo "<strong>Se ingresaron los registros con exito paciente</strong>. <br>";
          }
          else
          {
-            echo'<script>
-            alert("No se registro");
-            </script>';
+            echo "No se ingresaron los registros.pac <br>";
          }
  
       }
@@ -87,10 +71,9 @@
       
      
    }else{
-      echo'<script>
-            alert("Se rgistro con exito");
-            window.location="../forms/client.html";
-            </script>';
+      echo"<script>
+    alert('Las contraseñas no coinciden');
+    </script>";
     }
    
           

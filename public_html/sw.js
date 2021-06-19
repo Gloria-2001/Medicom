@@ -1,4 +1,4 @@
-const staticCacheName='site-static-v1';
+const staticCacheName='site-static-v0';
 const dynamicCacheName='site-dynamic-v2';
 const assets=[
     './',
@@ -44,7 +44,6 @@ const assets=[
     'https://fonts.gstatic.com/s/oswald/v36/TK3iWkUHHAIjg752GT8G.woff2',
     './Home.css',
     './fallback.html',
-    './images/imagenFallback.jpg',
 ];
 
 //cache size limit function
@@ -86,21 +85,19 @@ self.addEventListener("activate",(evt)=>{
 //fetch event 
 self.addEventListener("fetch",(evt)=>{
     //console.log("Fetch event",evt);
-    if (evt.request.url.indexOf('https://databases-auth.000webhost.com') === -1) {
-        evt.respondWith(
-                caches.match(evt.request).then(cacheRes=>{
-                    return cacheRes || fetch(evt.request).then(fetchRes=>{
-                        return caches.open(dynamicCacheName).then(cache=>{
-                            cache.put(evt.request.url,fetchRes.clone());
-                            limitCacheSize(dynamicCacheName,400)
-                            return fetchRes;
-                        })
-                    });
-                }).catch(()=> {
-                    if(evt.request.url.indexOf('.html') > -1){
-                        return caches.match('./fallback.html');
-                    }
+    evt.respondWith(
+        caches.match(evt.request).then(cacheRes=>{
+            return cacheRes || fetch(evt.request).then(fetchRes=>{
+                return caches.open(dynamicCacheName).then(cache=>{
+                    cache.put(evt.request.url,fetchRes.clone());
+                    limitCacheSize(dynamicCacheName,400)
+                    return fetchRes;
                 })
-        );
-    }
+            });
+        }).catch(()=> {
+            if(evt.request.url.indexOf('.html') > -1){
+                return caches.match('./fallback.html');
+            }
+        })
+    );
 });

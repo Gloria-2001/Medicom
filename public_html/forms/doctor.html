@@ -20,19 +20,19 @@
     <h1 class="titForms">Registro de Doctores</h1>
     <p>¿Eres médico?</p><br><br>
     <p>Ven y regístrate para colaborar con nosotros</p><br><br>
-    <form action="../AltaDoctor.php" method="POST">
+    <form action="">
         <fieldset id="c1">
             <legend class="titulo">Información General</legend>
             <legend id="parte1">
-                <p class="opc">Nombre:</p>&nbsp;<input type="text" name="Nombre" id="nombre"><br>
-                <p class="opc">Apellido Paterno:</p>&nbsp;<input type="text" name="Apellido_PD" id="ap"><br>
-                <p class="opc">Apellido Materno:</p>&nbsp;<input type="text" name="Apellido_MD" id="am">
+                <p class="opc">Nombre:</p>&nbsp;<input type="text" id="nombre"><br>
+                <p class="opc">Apellido Paterno:</p>&nbsp;<input type="text" id="ap"><br>
+                <p class="opc">Apellido Materno:</p>&nbsp;<input type="text" id="am">
                 <br><br>
-                <p class="opc">Calle:</p>&nbsp;<input type="text" name="Calle" id="calle"> <br>
-                <p class="opc">No.</p>&nbsp;<input type="number" name="Num" id="num"> <br>
-                <p class="opc">Colonia</p>&nbsp;<input type="text" name="Col" id="col"> <br>
-                <p class="opc">CP</p>&nbsp;<input type="number" name="Cp" id="cp"> <br>
-                <p class="opc">Delegación o Municipio</p>&nbsp;<input type="text" name="Del" id="delMun"> 
+                <p class="opc">Calle:</p>&nbsp;<input type="text" id="calle"> <br>
+                <p class="opc">No.</p>&nbsp;<input type="number" id="num"> <br>
+                <p class="opc">Colonia</p>&nbsp;<input type="text" id="col"> <br>
+                <p class="opc">CP</p>&nbsp;<input type="number" id="cp"> <br>
+                <p class="opc">Delegación o Municipio</p>&nbsp;<input type="text" id="delMun"> 
                 <br><br>
                 <p class="opc">Sexo:</p>
                 <input type="radio" name="sexo" id="h" value="Hombre"><p></p>Hombre 
@@ -40,13 +40,13 @@
                 <input type="radio" name="sexo" id="o" value="Otro"><p>Prefiero no decirlo</p>
                 <br><br>
                 <p class="opc">CURP:</p> 
-                <input type="text" name="CURP" id="curp">
+                <input type="text" name="" id="curp">
                 <br><br>
                 <p class="opc">Estado Civil:</p>
-                <input type="radio" name="edo_Civil" id="s" value="Soltero"><p>Soltero</p> 
-                <input type="radio" name="edo_Civil" id="c" value="Casado"><p>Casado</p> 
-                <input type="radio" name="edo_Civil" id="v" value="Viudo"><p>Viudo</p>
-                <input type="radio" name="edo_Civil" id="d" value="Divorciado"><p>Divorciado</p>
+                <input type="radio" name="edoCivil" id="s" value="Soltero"><p>Soltero</p> 
+                <input type="radio" name="edoCivil" id="c" value="Casado"><p>Casado</p> 
+                <input type="radio" name="edoCivil" id="v" value="Viudo"><p>Viudo</p>
+                <input type="radio" name="edoCivil" id="d" value="Divorciado"><p>Divorciado</p>
                 <br><br>
                 <p class="opc">Fecha de Nacimiento:</p>
                 <select name="mes" id="mes">
@@ -98,76 +98,76 @@
                     <option value="30">30</option>
                     <option value="31">31</option>
                 </select>
-                <input type="text" size="30" name="anio" placeholder="Año a 4 digitos">
+                <input type="number" placeholder="Año">
                 <br><br>
                 <p class="opc">Cédula Profesional:</p> 
-                <input type="text" name="Ced_Prof" id="cedProf">
+                <input type="text" name="" id="cedProf">
                 <br><br>
                 <p class="opc">Especialidad:</p>
                 <table>
                     <tr>
-                        <td><input type="checkbox" value="Alergologia" name="especialidades[]">Alergología</td>
-                        <td><input type="checkbox" value="Anestesiologia y reanimacion" name="especialidades[]">Anestesiología y reanimación</td>
-                        <td><input type="checkbox" value="Cardiologia" name="especialidades[]">Cardiología</td>
-                        <td><input type="checkbox" value="Endocrinologia" name="especialidades[]">Endocrinología</td>
-                        <td><input type="checkbox" value=" Gastroenterologia" name="especialidades[]"> Gastroenterología</td>
+                        <td><input type="checkbox" name="especialidades" value="Alergología">Alergología</td>
+                        <td><input type="checkbox" name="especialidades" value="Anestesiología y reanimación">Anestesiología y reanimación</td>
+                        <td><input type="checkbox" name="especialidades" value="Cardiología">Cardiología</td>
+                        <td><input type="checkbox" name="especialidades" value="Endocrinología">Endocrinología</td>
+                        <td><input type="checkbox" name="especialidades" value=" Gastroenterología"> Gastroenterología</td>
                     </tr>
                     <tr>
-                        <td><input type="checkbox" value="Geriatria" name="especialidades[]">Geriatría</td>
-                        <td><input type="checkbox" value="Hematologia y hemoterapia" name="especialidades[]">Hematología y hemoterapia</td>
-                        <td><input type="checkbox" value="Infectologia" name="especialidades[]">Infectología</td>
-                        <td><input type="checkbox" value="Medicina aeroespacial" name="especialidades[]">Medicina aeroespacial</td>
-                        <td><input type="checkbox" value="Medicina del deporte" name="especialidades[]">Medicina del deporte</td>
+                        <td><input type="checkbox" name="especialidades" value="Geriatría">Geriatría</td>
+                        <td><input type="checkbox" name="especialidades" value="Hematología y hemoterapia">Hematología y hemoterapia</td>
+                        <td><input type="checkbox" name="especialidades" value="Infectología">Infectología</td>
+                        <td><input type="checkbox" name="especialidades" value="Medicina aeroespacial">Medicina aeroespacial</td>
+                        <td><input type="checkbox" name="especialidades" value="Medicina del deporte">Medicina del deporte</td>
                     </tr>
                     <tr>
-                        <td><input type="checkbox" value="Nefrologia" name="especialidades[]">Nefrología</td>
-                        <td><input type="checkbox" value="Neumologia" name="especialidades[]">Neumología</td>
-                        <td><input type="checkbox" value="Neurologia" name="especialidades[]">Neurología</td>
-                        <td><input type="checkbox" value="Nutriologia" name="especialidades[]">Nutriología</td>
-                        <td><input type="checkbox" value="Oftalmologia" name="especialidades[]">Oftalmología</td>
+                        <td><input type="checkbox" name="especialidades" value="Nefrología">Nefrología</td>
+                        <td><input type="checkbox" name="especialidades" value="Neumología">Neumología</td>
+                        <td><input type="checkbox" name="especialidades" value="Neurología">Neurología</td>
+                        <td><input type="checkbox" name="especialidades" value="Nutriología">Nutriología</td>
+                        <td><input type="checkbox" name="especialidades" value="Oftalmología">Oftalmología</td>
                     </tr>
                     <tr>
-                        <td><input type="checkbox" value="Oncologia medica" name="especialidades[]">Oncología médica</td>
-                        <td><input type="checkbox" value="Oncologia radioterapica" name="especialidades[]">Oncología radioterápica</td>
-                        <td><input type="checkbox" value="Pediatria" name="especialidades[]">Pediatría</td>
-                        <td><input type="checkbox" value="Psiquiatria" name="especialidades[]">Psiquiatría</td>
-                        <td><input type="checkbox" value="Toxicologia" name="especialidades[]">Toxicología</td>
+                        <td><input type="checkbox" name="especialidades" value="Oncología médica">Oncología médica</td>
+                        <td><input type="checkbox" name="especialidades" value="Oncología radioterápica">Oncología radioterápica</td>
+                        <td><input type="checkbox" name="especialidades" value="Pediatría">Pediatría</td>
+                        <td><input type="checkbox" name="especialidades" value="Psiquiatría">Psiquiatría</td>
+                        <td><input type="checkbox" name="especialidades" value="Toxicología">Toxicología</td>
                     </tr>
                     <tr>
-                        <td><input type="checkbox" value="Cirugia cardiovascular" name="especialidades[]">Cirugía cardiovascular</td>
-                        <td><input type="checkbox" value="Cirugia general y del aparato digestivo" name="especialidades[]">Cirugía general y del aparato digestivo</td>
-                        <td><input type="checkbox" value="Cirugia ortopedica y traumatologia" name="especialidades[]">Cirugía ortopédica y traumatología</td>
-                        <td><input type="checkbox" value="Cirugia pediatrica" name="especialidades[]">Cirugía pediátrica</td>
-                        <td><input type="checkbox" value="Cirugia toracica" name="especialidades[]">Cirugía torácica</td>
+                        <td><input type="checkbox" name="especialidades" value="Cirugía cardiovascular">Cirugía cardiovascular</td>
+                        <td><input type="checkbox" name="especialidades" value="Cirugía general y del aparato digestivo">Cirugía general y del aparato digestivo</td>
+                        <td><input type="checkbox" name="especialidades" value="Cirugía ortopédica y traumatología">Cirugía ortopédica y traumatología</td>
+                        <td><input type="checkbox" name="especialidades" value="Cirugía pediátrica">Cirugía pediátrica</td>
+                        <td><input type="checkbox" name="especialidades" value="Cirugía torácica">Cirugía torácica</td>
                     </tr>
                     <tr>
-                        <td><input type="checkbox" value="Neurocirugia" name="especialidades[]">Neurocirugía</td>
-                        <td><input type="checkbox" value="Angiologia y cirugia vascular" name="especialidades[]">Angiología y cirugía vascular</td>
-                        <td><input type="checkbox" value="Dermatologia" name="especialidades[]">Dermatología</td>
-                        <td><input type="checkbox" value="Odontologia" name="especialidades[]">Odontología</td>
-                        <td><input type="checkbox" value="Ginecologia y obstetricia o tocologia" name="especialidades[]">Ginecología y obstetricia o tocología</td>
+                        <td><input type="checkbox" name="especialidades" value="Neurocirugía">Neurocirugía</td>
+                        <td><input type="checkbox" name="especialidades" value="Angiología y cirugía vascular">Angiología y cirugía vascular</td>
+                        <td><input type="checkbox" name="especialidades" value="Dermatología">Dermatología</td>
+                        <td><input type="checkbox" name="especialidades" value="Odontología">Odontología</td>
+                        <td><input type="checkbox" name="especialidades" value="Ginecología y obstetricia o tocología">Ginecología y obstetricia o tocología</td>
                     </tr>
                     <tr>
-                        <td><input type="checkbox" value="Otorrinolaringologia" name="especialidades[]">Otorrinolaringología</td>
-                        <td><input type="checkbox" value="Urologia" name="especialidades[]">Urología</td>
-                        <td><input type="checkbox" value="Traumatologia" name="especialidades[]">Traumatología</td>
-                        <td><input type="checkbox" value="Inmunologia" name="especialidades[]">Inmunología</td>
-                        <td><input type="checkbox" value="Neurofisiologia clínica" name="especialidades[]">Neurofisiología clínica</td>
+                        <td><input type="checkbox" name="especialidades" value="Otorrinolaringología">Otorrinolaringología</td>
+                        <td><input type="checkbox" name="especialidades" value="Urología">Urología</td>
+                        <td><input type="checkbox" name="especialidades" value="Traumatología">Traumatología</td>
+                        <td><input type="checkbox" name="especialidades" value="Inmunología">Inmunología</td>
+                        <td><input type="checkbox" name="especialidades" value="Neurofisiología clínica">Neurofisiología clínica</td>
                     </tr>
                 </table>
                 <br><br>
                 <p class="opc">Clínica en la que labora:</p> 
-                <input type="text" name="Clinica">
+                <input type="text">
             </legend>
         </fieldset>
         <fieldset id="c2">
             <legend class="titulo">Contacto</legend>
             <legend>
                 <p class="opc">Correo:</p>
-                <input type="email" name="Email">
+                <input type="email">
                 <br><br>
                 <p class="opc">Teléfono:</p>
-                <input type="tel" name="Tel">
+                <input type="tel">
             </legend>
         </fieldset>
         <fieldset id="c3">
@@ -175,18 +175,18 @@
             <legend>
                 <p>Elija un usuario y una contraseña</p><br><br>
                 <p class="opc">Usuario:</p>
-                <input type="text" name="User">
+                <input type="text">
                 <br><br>
                 <p class="opc">Contraseña:</p>
                 <input type="password" name="contrasena">
                 <br><br>
                 <p class="opc">Confirme contraseña:</p>
-                <input type="password" name="contrasena1">
+                <input type="password" name="contrasena">
             </legend>
         </fieldset> 
         <br>
         <div id="botones">
-            <input type="submit" name="Registro" value="Registrarse" id="send" class="boton">
+            <input type="button" value="Registrarse" id="send" class="boton">
             <button type="reset" class="boton">Borrar</button>   
         </div>
     </form>

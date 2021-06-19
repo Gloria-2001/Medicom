@@ -1,0 +1,95 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+<link rel="manifest" href="./manifest.json">
+<!--IOS SUPPORT-->
+<link rel="apple-touch-icon" href="./images/icons/icon-96x96.png">
+<meta name="apple-mobile-web-app-status-bar" content="#20b2aa">
+<meta name="theme-color" content="#20b2aa">
+<style>
+html{
+	background-image: url("./images/fondoIdentificacion.jpg");
+	background-size:cover;
+  background-repeat: no-repeat;
+}
+
+#general{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.container {
+  position: relative;
+  width: 19%;
+top: 0;
+left: 0;
+right: 0;
+bottom: 0;
+margin: auto;
+}
+
+.image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: #008CBA;
+}
+
+.container:hover .overlay {
+  opacity: 1;
+}
+
+.text {
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+a{
+  text-decoration: none;
+  color: white;
+}
+</style>
+</head>
+<body>
+	<h1 align="center">Selecciona un modo:</h1>
+	<a href="forms/client.html"><div class="container">
+      <img src="images/usuario.png" alt="usuario" class="image" width="50px" height="50px">
+      <div class="overlay">
+      <div class="text">Paciente</div>
+      </div>
+	</div></a>
+      
+    <a href="forms/doctor.html"><div class="container">
+ 	  <img src="images/doctor.png" alt="medico" class="image" width="50px" height="50px">
+      <div class="overlay">
+      <div class="text">M&eacute;dico</div>
+      </div>
+	</div></a>
+
+
+  </div>
+	
+  <script src="./app.js"></script>
+</body>
+</html>

@@ -58,7 +58,6 @@
   <tbody>
   </tbody>
   </table>
-  <form action="./AltaHorario.php" method="POST">
   <p class="opc">Ingresa fecha de día inhábil:</p>
                 <select name="mes" id="mes">
                     <option value="0">Mes</option>
@@ -109,17 +108,18 @@
                     <option value="30">30</option>
                     <option value="31">31</option>
                 </select>
-                <input type="text" name="anio" placeholder="Año a 4 digitos">
+                <input type="number" name="anio" placeholder="Año a 4 digitos">
                 <a>Ingresa tu ID de médico.</a>
-                <input type="number" name="User" id="buscaMedico">
-                <input type="submit" name="Enviar" value="Registrar_día" id="botonEnviar">
+                <input type="number" name="medico" id="buscaMedico">
+                <input type="button" value="Registrar día" id="botonEnviar">
                 <br><br>
                 <p>Indica tu situación de trabajo, apaga el switch si no estas disponible y prendelo de lo contario.</p>
                 <label class="switchBtn">
-                <input type="checkbox" id="myCheck" name="estatus" value="Disponible">
+                <input type="checkbox" id="myCheck">
                 <div class="slide round">Disponible</div>
                 </label><br>
-                <input type="submit" name="Modificar" value="Actualizar_estatus" id="botonModificar">
+                <input type="button" value="Actualizar estatus" id="botonModificar">
+
       </div>
 		</div>
 
@@ -128,7 +128,6 @@
     <script src="./sidebar-04/js/bootstrap.min.js"></script>
     <script src="./sidebar-04/js/main.js"></script>
     <script src="./app.js"></script>
-  </form>
   </body>
 </html>
 <script>

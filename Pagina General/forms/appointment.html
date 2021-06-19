@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro Cita</title>
+    <link rel="stylesheet" href="./styles/styleForms.css">
+    <link rel="manifest" href="../manifest.json">
+    <!--IOS SUPPORT-->
+    <link rel="apple-touch-icon" href="../images/icons/icon-96x96.png">
+    <meta name="apple-mobile-web-app-status-bar" content="#20b2aa">
+
+    <meta name="theme-color" content="#20b2aa">
+</head>
+<header>
+    <img src="../images/logoMedicom.PNG" alt="">
+</header>
+<body>
+    <h1>Registro de Citas</h1>
+    <p>¿Necesitas una cita médica?</p><br><br>
+    <p>Sólo llena el formulario</p><br><br>
+    <form action="">
+        <fieldset id="c4">
+            <legend class="titulo">Datos para agendar cita</legend>
+            <legend id="parte1">
+                <p class="opc">Nombre del Paciente:</p> <br>
+                <p class="opc">Nombre:</p>&nbsp;<input type="text" id="nombre"><br>
+                <p class="opc">Apellido Paterno:</p>&nbsp;<input type="text" id="ap"><br>
+                <p class="opc">Apellido Materno:</p>&nbsp;<input type="text" id="am">
+                <br><br>
+                <p class="opc">Sexo:</p>
+                <input type="radio" name="sexo" id="h" value="Hombre"><p></p>Hombre 
+                <input type="radio" name="sexo" id="m" value="Mujer"><p>Mujer</p> 
+                <input type="radio" name="sexo" id="o" value="Otro"><p>Prefiero no decirlo</p>
+                <br><br>
+                <p class="opc">Clínica de su preferencia:</p>
+                <input type="text" name="" id="clinica">
+                <br><br>
+                <p class="opc">Doctor con el que le gustaría acudir:</p>
+                <input type="text" name="" id="doctor">
+                <p class="opc"><u>En caso de no tener el nombre del doctor a la mano, elija en qué área requiere la cita.</u></p>
+                <table>
+                    <tr>
+                        <td><input type="checkbox" name="especialidades" value="Alergología">Alergología</td>
+                        <td><input type="checkbox" name="especialidades" value="Anestesiología y reanimación">Anestesiología y reanimación</td>
+                        <td><input type="checkbox" name="especialidades" value="Cardiología">Cardiología</td>
+                        <td><input type="checkbox" name="especialidades" value="Endocrinología">Endocrinología</td>
+                        <td><input type="checkbox" name="especialidades" value=" Gastroenterología"> Gastroenterología</td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" name="especialidades" value="Geriatría">Geriatría</td>
+                        <td><input type="checkbox" name="especialidades" value="Hematología y hemoterapia">Hematología y hemoterapia</td>
+                        <td><input type="checkbox" name="especialidades" value="Infectología">Infectología</td>
+                        <td><input type="checkbox" name="especialidades" value="Medicina aeroespacial">Medicina aeroespacial</td>
+                        <td><input type="checkbox" name="especialidades" value="Medicina del deporte">Medicina del deporte</td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" name="especialidades" value="Nefrología">Nefrología</td>
+                        <td><input type="checkbox" name="especialidades" value="Neumología">Neumología</td>
+                        <td><input type="checkbox" name="especialidades" value="Neurología">Neurología</td>
+                        <td><input type="checkbox" name="especialidades" value="Nutriología">Nutriología</td>
+                        <td><input type="checkbox" name="especialidades" value="Oftalmología">Oftalmología</td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" name="especialidades" value="Oncología médica">Oncología médica</td>
+                        <td><input type="checkbox" name="especialidades" value="Oncología radioterápica">Oncología radioterápica</td>
+                        <td><input type="checkbox" name="especialidades" value="Pediatría">Pediatría</td>
+                        <td><input type="checkbox" name="especialidades" value="Psiquiatría">Psiquiatría</td>
+                        <td><input type="checkbox" name="especialidades" value="Toxicología">Toxicología</td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" name="especialidades" value="Cirugía cardiovascular">Cirugía cardiovascular</td>
+                        <td><input type="checkbox" name="especialidades" value="Cirugía general y del aparato digestivo">Cirugía general y del aparato digestivo</td>
+                        <td><input type="checkbox" name="especialidades" value="Cirugía ortopédica y traumatología">Cirugía ortopédica y traumatología</td>
+                        <td><input type="checkbox" name="especialidades" value="Cirugía pediátrica">Cirugía pediátrica</td>
+                        <td><input type="checkbox" name="especialidades" value="Cirugía torácica">Cirugía torácica</td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" name="especialidades" value="Neurocirugía">Neurocirugía</td>
+                        <td><input type="checkbox" name="especialidades" value="Angiología y cirugía vascular">Angiología y cirugía vascular</td>
+                        <td><input type="checkbox" name="especialidades" value="Dermatología">Dermatología</td>
+                        <td><input type="checkbox" name="especialidades" value="Odontología">Odontología</td>
+                        <td><input type="checkbox" name="especialidades" value="Ginecología y obstetricia o tocología">Ginecología y obstetricia o tocología</td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" name="especialidades" value="Otorrinolaringología">Otorrinolaringología</td>
+                        <td><input type="checkbox" name="especialidades" value="Urología">Urología</td>
+                        <td><input type="checkbox" name="especialidades" value="Traumatología">Traumatología</td>
+                        <td><input type="checkbox" name="especialidades" value="Inmunología">Inmunología</td>
+                        <td><input type="checkbox" name="especialidades" value="Neurofisiología clínica">Neurofisiología clínica</td>
+                    </tr>
+                </table>
+                <br><br>
+                <p class="opc">Indique la fecha en que le gustaría la cita:</p>
+                <input type="date" name="" id="fecha">
+                <br><br>
+                <p class="opc">Coloque la hora que mejor le acomode:</p>
+                <input type="time" name="" id="hora">
+                <br><br>
+            </legend>
+        </fieldset>
+        <br>
+        <div id="botones">
+            <input type="button" value="Registrar Cita" id="send" class="boton">
+            <button type="reset" class="boton">Borrar</button>   
+        </div>
+    </form>
+    <script src="../app.js"></script>
+</body>
+</html>

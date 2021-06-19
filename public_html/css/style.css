@@ -8334,3 +8334,82 @@ a[data-toggle="collapse"] {
   .form-control:-moz-placeholder {
     /* Firefox 18- */
     color: rgba(0, 0, 0, 0.3); }
+ #calendar {
+      font-family:Arial;
+      font-size:12px;
+      color: black;
+    }
+    #calendar caption {
+      text-align:left;
+      padding:5px 10px;
+      background-color:#003366;
+      color:#fff;
+      font-weight:bold;
+      font-size:medium;
+    }
+    #calendar caption div:nth-child(1) {float:left;}
+    #calendar caption div:nth-child(2) {float:right;}
+    #calendar caption div:nth-child(2) a {cursor:pointer;}
+    #calendar th {
+      background-color:#006699;
+      color:#fff;
+      width:40px;
+    }
+    #calendar td {
+      text-align:right;
+      padding:2px 5px;
+      background-color:silver;
+    }
+    #calendar .hoy {
+      background-color:goldenrod;
+    }
+.switchBtn {
+    position: relative;
+    display: inline-block;
+    width: 120px;
+    height: 34px;
+}
+.switchBtn input {display:none;}
+.slide {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: red;
+    -webkit-transition: .4s;
+    transition: .4s;
+    padding: 5px;
+    color: #fff;
+}
+.slide:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 82px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+input:checked + .slide {
+    background-color: green;
+    padding-left: 40px;
+}
+input:focus + .slide {
+    box-shadow: 0 0 1px #01aeed;
+}
+input:checked + .slide:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+    left: -20px;
+}
+.slide.round {
+    border-radius: 34px;
+}
+.slide.round:before {
+    border-radius: 50%;
+}
