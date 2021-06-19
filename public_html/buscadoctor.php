@@ -51,7 +51,7 @@
               <a href="recetas.php">Recetas</a>
 	          </li>
 	          <li>
-              <a href="historialclinico.html">Historial cl&iacute;nico</a>
+              <a href="historialclinico.php">Historial cl&iacute;nico</a>
 	          </li>
               <li>
               <a href="buscadoctor.php">Busca tu doctor</a>
