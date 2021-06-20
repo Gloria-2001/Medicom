@@ -18,7 +18,7 @@
   </head>
   <style>
       table{
-          width: 900px;
+          width: 1000px;
           height: 450px;
           border: black thick;
       }
@@ -27,17 +27,22 @@
           font-size: larger;
       }
 
-      #doctor{
-          width: 480px;
-      }
-
-      #cedula{
+     #cedula{
           width: 220px;
       }
 
       #paciente{
-          width: 820px;
+          width: 300px;
       }
+
+      #paciente2{
+          width: 300px;
+      }
+
+      #paciente3{
+          width: 300px;
+      }
+      
 
       td{
           padding: 10px;
@@ -95,18 +100,18 @@
                                         
                 </tr>
                 <tr>
-                    <td colspan="2">Dr. <input type="text" name="doctor" id="doctor" placeholder="Nombre Médico"></td>
+                    <td colspan="2">Dr. <input type="text" name="doctor" id="doctor" placeholder="Nombre"> <input type="text" name="doctor_firstname" id="doctor2" placeholder="Apellido Paterno"> <input type="text" name="doctor_lastname" id="doctor3" placeholder="Apellido Materno"></td>
                     <td colspan="3">Cédula Profesional: <input type="text" name="cedula" id="cedula" placeholder="Cédula"></td>
                 </tr>
                 <tr>
-                    <td colspan="2">Espacialidades: <br> <textarea name="especialidades" id="esp" cols="70" rows="2" placeholder="Ingrese Especialidades"></textarea></td>
+                    <td colspan="2">Espacialidades: <br> <textarea name="especialidades" id="esp" cols="80" rows="2" placeholder="Ingrese Especialidades"></textarea></td>
                     <td colspan="3">Fecha: <input type="date" name="fecha" id="fecha"></td>
                 </tr>
                 <tr>
-                    <td colspan="3">Paciente: <input type="text" name="paciente" id="paciente" placeholder="Nombre Paciente"></td>
+                    <td colspan="3">Paciente: <input type="text" name="paciente" id="paciente" placeholder="Nombre">  <input type="text" name="paciente_firstname" id="paciente2" placeholder="Apellido Paterno">  <input type="text" name="paciente_lastname" id="paciente3" placeholder="Apellido Materno"></td>
                 </tr>
                 <tr>
-                    <td rowspan="4" colspan="2"><textarea name="medicinas" id="med" cols="70" rows="10" placeholder="Coloque las medicinas y/o indicaciones"></textarea></td>
+                    <td rowspan="4" colspan="2"><textarea name="medicinas" id="med" cols="80" rows="10" placeholder="Coloque las medicinas y/o indicaciones"></textarea></td>
                     <td>Edad: <input type="number" name="edad" id="edad"> años</td>
                 </tr>
                 <tr>
@@ -119,6 +124,7 @@
                     <td>Alergias: <br><textarea name="alergias" id="alergias" cols="50" rows="3"></textarea></td>
                 </tr>
             </table>
+            <br>
             <input type="reset" value="Borrar" class="botones">
             <input type="submit" value="Enviar" class="botones">
         </form>
