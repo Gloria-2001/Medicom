@@ -79,7 +79,7 @@
               <a href="buscadoctor.php">Busca tu doctor</a>
 	          </li>
               <li>
-              <a href="agenda.html">Agenda</a>
+              <a href="agenda.php">Agenda</a>
 	          </li>
 	        </ul>
 
