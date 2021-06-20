@@ -65,7 +65,7 @@
               <a href="historialclinico.php">Historial cl&iacute;nico</a>
 	          </li>
               <li>
-              <a href="buscadoctor.html">Busca tu doctor</a>
+              <a href="buscadoctor.php">Busca tu doctor</a>
 	          </li>
               <li>
               <a href="agenda.php">Agenda</a>
