@@ -1,3 +1,7 @@
+<?php
+    include("conexion.php");
+?>
+
 <!doctype html>
 <html lang="en">
   <head>
@@ -52,10 +56,10 @@
         <h2 class="mb-4">Consulta el Historial Clínico</h2>
         <p>Aquí podrás realizar el seguimiento de los datos más importantes de tus pacientes durante el uso de MediCom, nos aseguramos que solo esta información la tengan personal estrictamente autorizado.</p>
         <p>Ingresa el ID de tu paciente.</p>
-        <input type="search" name="historial" id="buscaHistorial">
-        <input type="button" value="Buscar" id="botonBuscar">
-        <input type="button" value="Limpiar" id="botonLimpiar">
-        <input type="button" value="Modificar" id="botonModificar">
+        <form action="consultaHistorial.php" method="POST">
+            <input type="search" name="historial" id="buscaHistorial">
+            <input type="submit" value="Buscar" id="botonBuscar">
+        </form>
         <br><br>
         <table border="1">
             <thead>
@@ -66,6 +70,51 @@
                 <th>Doctores que le han atendido</th>
                 <th>Observaciones de seguimiento</th>
             </thead>
+            <?php
+                //Obtener datos del form
+                $idPaciente = $_POST['historial'];
+                //Consultar en expediente
+                $consulta = "SELECT * FROM expediente WHERE id_Paciente = '$idPaciente'";  
+                $result = mysqli_query($conn, $consulta);
+                    
+                if(!empty($idPaciente)){
+                    while($mostrar=mysqli_fetch_array($result)){
+                        $consulta2 = "SELECT * FROM paciente WHERE id_Paciente='$idPaciente'";
+                        $result2 = mysqli_query($conn,$consulta2);
+                        $row = mysqli_fetch_assoc($result2);
+                    
+                        $direcPac = $row['direccion'];
+                        $alergiaPac = $row['Alergias'];
+                    
+                        $consulta3 = "SELECT * FROM cita WHERE id_Paciente='$idPaciente'";
+                        $result3 = mysqli_query($conn,$consulta3);
+                    
+                        $doctores = array();
+                        $cont=0;
+                    
+                        while($row2 = mysqli_fetch_array($result3)){
+                            $doctores[$cont] = $row2['Nombre_Doctor'];
+                            $cont++;
+                        }
+                    
+                        foreach($doctores as $element){
+                            $doctoresPac = $doctoresPac.", ".$element;
+                        }
+                    
+                        $doctoresPac = ltrim($doctoresPac,", ");
+            ?>
+            <tr>
+                <td><?php echo $mostrar['id_Paciente']?></td>
+                <td><?php echo $mostrar['Nombre_Paciente']?></td>
+                <td><?php echo $direcPac?></td>
+                <td><?php echo $alergiaPac?></td>
+                <td><?php echo $doctoresPac?></td>
+                <td><?php echo $mostrar['observaciones']?></td>
+            </tr>
+            <?php
+                    }
+                }
+            ?>
         </table>
       </div>
 		</div>
