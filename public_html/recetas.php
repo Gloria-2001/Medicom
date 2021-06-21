@@ -89,8 +89,7 @@
 		<table border="1">
 			<thead>
 				<th>Fecha</th>
-				<th>Medicamentos</th>
-				<th>Instrucciones</th>
+				<th>Medicamentos e Instrucciones</th>
 				<th>Médico tratante</th>
 			</thead>
 			<?php
@@ -111,7 +110,6 @@
 			?>
 			<tr>
 			    <td><?php echo $mostrar['Fecha_Exp']?></td>
-			    <td><?php echo $mostrar['Medicamentos']?></td>
 			    <td><?php echo $mostrar['indicaciones']?></td>
 			    <td><?php echo $nombreDoc?></td>
 			</tr>
