@@ -1,5 +1,5 @@
-const staticCacheName='site-static-v1';
-const dynamicCacheName='site-dynamic-v4';
+const staticCacheName='site-static-v2';
+const dynamicCacheName='site-dynamic-v5';
 const assets=[
     './',
     './index.html',
@@ -45,6 +45,9 @@ const assets=[
     './Home.css',
     './fallback.html',
     './images/imagenFallback.jpg',
+    './terminosCondiciones.html',
+    './privacidad.html',
+    './images/MediComLogo.png',
 ];
 
 //cache size limit function
